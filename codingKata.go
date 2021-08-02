@@ -8,8 +8,7 @@ import "fmt"
 
 func  FindOutlier(integers []int) int{
 	//Declare an empty array to store odd numbers from loop
-	var odd []int
-	var even []int
+	var odd, even []int
 	for _, val := range integers {
 		//check for even number
 		if val %2 == 0 {
@@ -18,6 +17,7 @@ func  FindOutlier(integers []int) int{
 			odd = append(odd, val)
 		}
 	}
+	fmt.Println(even)
 		if len(even) == 1{
 			return even[0]
 	}
